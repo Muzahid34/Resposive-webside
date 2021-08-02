@@ -10,46 +10,47 @@
         .photo-album {
             display: flex;
             flex-wrap: wrap;
-
         }
 
         .photo-frame {
             width: 300px;
             height: 200px;
-            border: 2px solid goldenrod;
-            border-radius: 20px;
-            margin: 2px;
+            border: solid goldenrod 1px;
+            border-radius: 15px;
             position: relative;
-
-
+            margin: 2px;
+            overflow: hidden;
         }
 
         .photo img {
-            width: 50%;
+            width: 100%;
         }
-
 
         .photo-details {
             display: none;
             position: absolute;
             width: 300px;
             top: 0;
+
         }
 
         .photo-frame:hover .photo-details {
             display: block;
-            background-color: rgba(218, 165, 32, 0.2);
+            background-color: rgba(44, 29, 138, 0.637)
+        }
+
+        .photo-frame:hover .photo {
+            transform: scale(1.15) rotate(360deg);
+            transition: transform 2s ease-in-out;
         }
 
         .photo-details h3 {
-            background-color: black;
-            color: white;
             text-align: center;
-
+            color: black;
         }
 
         .photo-details p {
-            color: black;
+            color: lightcoral;
         }
     </style>
 </head>
